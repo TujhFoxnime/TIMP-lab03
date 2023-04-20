@@ -23,8 +23,8 @@ project(formatter)                                     а этот присва�
 add_library(formatter_lib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/b/formatter.cpp)             а тут указывается путь до библиотеки
 
 * cd prep
-* cmake ..                       компиляция файлов в prep
-* cmake --build .                  сборка
+* cmake ..
+* cmake --build .
 * [100%] Built target formatter_lib
 
 
@@ -119,18 +119,7 @@ target_link_libraries(solver formatter_ex_lib solver_lib)
 
 
 
-8) cd build
-9) cmake ..
-10) cmake --build .
-[ 12%] Building CXX object slvr/CMakeFiles/solver_lib.dir/src/solver.cpp.o
-[ 25%] Linking CXX static library libsolver_lib.a
-[ 25%] Built target solver_lib
-[ 37%] Building CXX object frmtr_ex/formatter/CMakeFiles/formatter_lib.dir/src/formatter.cpp.o
-[ 50%] Linking CXX static library libformatter_lib.a
-[ 50%] Built target formatter_lib
-[ 62%] Building CXX object frmtr_ex/CMakeFiles/formatter_ex_lib.dir/src/formatter_ex.cpp.o
-[ 75%] Linking CXX static library libformatter_ex_lib.a
-[ 75%] Built target formatter_ex_lib
-[ 87%] Building CXX object CMakeFiles/solver.dir/src/equation.cpp.o
-[100%] Linking CXX executable solver
+* cd build
+* cmake ..
+* cmake --build .
 * [100%] Built target solver
