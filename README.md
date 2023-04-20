@@ -20,7 +20,7 @@ cmake_minimum_required(VERSION 3.22.1 FATAL_ERROR)     это общие ста�
 set(CMAKE_CXX_STANDARD 11)                             и это                
 set(CMAKE_CXX_STANDARD_REQUIRED ON)                    и это
 project(formatter)                                     а этот присваивает имя проекту
-add_library(formatter_lib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/b/formatter.cpp)             а тут указывается путь до библиотеки
+add_library(formatter_lib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/b/formatter.cpp)             а тут указывается путь до файла с библиотекой
 
 * cd prep
 * cmake ..
@@ -112,9 +112,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../formatter_ex_lib formatter_ex_l>
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/../solver_lib solver_lib_dir)
-add_executable(solver "~/solver_lib/build/equation.cpp")
+add_executable(solver "~/solver_lib/build/equation.cpp")         создаем таргет исполняемого файла, исходный код которого лежит в срр
 target_include_directories(solver PUBLIC
-{CMAKE_CURRENT_SOURCE_DIR}/../solver_lib/build)
+{CMAKE_CURRENT_SOURCE_DIR}/../solver_lib/build)                  открываем доступ тагрету к директории 
 target_link_libraries(solver formatter_ex_lib solver_lib)
 
 
