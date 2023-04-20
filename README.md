@@ -22,10 +22,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)                    и это
 project(formatter)                                     а этот присваивает имя проекту
 add_library(formatter_lib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/b/formatter.cpp)             а тут указывается путь до библиотеки
 
-cd prep
-cmake ..                       компиляция файлов в prep
-cmake --build .                  сборка
-                        [100%] Built target formatter_lib
+* cd prep
+* cmake ..                       компиляция файлов в prep
+* cmake --build .                  сборка
+* [100%] Built target formatter_lib
 
 
 
@@ -54,11 +54,10 @@ target_include_directories(formatter_ex_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/>
 target_link_libraries(formatter_ex_lib formatter_lib)                   связка библиотек (1 и 2)
 
 
-10) cd prep
-11) cmake ..
-12) cmake -- build .    
-
-                   [100%] Built target formatter_ex_lib
+* cd prep
+* cmake ..
+* cmake -- build .    
+* [100%] Built target formatter_ex_lib
 
 
 
@@ -88,7 +87,7 @@ target_link_libraries(hello_world formatter_ex_lib)
 8) ~/hw$ cd build
 9) ~/hw/build$ cmake ..
 10) ~/hw/build$ cmake --build .
-                                [100%] Built target hello_world
+* [100%] Built target hello_world
 
 
 Часть III  _solver
@@ -134,4 +133,4 @@ target_link_libraries(solver formatter_ex_lib solver_lib)
 [ 75%] Built target formatter_ex_lib
 [ 87%] Building CXX object CMakeFiles/solver.dir/src/equation.cpp.o
 [100%] Linking CXX executable solver
-[100%] Built target solver
+* [100%] Built target solver
